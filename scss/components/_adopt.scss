@@ -1,0 +1,72 @@
+/*--- ADOPTA | GALLERY SECTION ---*/
+.adopt-content{
+    margin-top: (10rem / 2); //SASS Operaciones
+    padding: 100px - 80px; //SASS Operaciones
+    h2{
+        font-size: 2em;
+    }
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: (5 * 50px); //SASS Operaciones
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+    min-height: 100vh;
+    margin: 20px;
+    :nth-child(1),
+    :nth-child(3){
+        grid-row: span 2;
+    }
+    :nth-child(2){
+        grid-column: span 2;
+    }
+    :nth-child(8){
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .gallery-container{
+        .gallery-item{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .image{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                }
+                .img-content{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    color: #fff;
+                    background:rgba(26,26,26,0.5);
+                    opacity: 0;
+                    padding: 30px;
+                }
+            }
+            .image:hover img{
+                transition: .4s ease-in-out;
+                transform: scale(1.2);
+            } 
+        }
+        .gallery-item:hover .image .img-content{
+            opacity: 1;
+        }
+    }
+}

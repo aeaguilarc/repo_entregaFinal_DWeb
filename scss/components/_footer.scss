@@ -1,0 +1,25 @@
+/*--- FOOTER SECTION ---*/
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    .footer-title{
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        padding-left: 20px;
+    }
+    .social-media{
+        display: flex;
+        font-size: 30px;
+        margin: .5rem;
+        .links{
+            color:#111;
+            padding: 0 2rem;
+            :hover{
+                color: $main-color;
+            }
+        }
+    }
+}

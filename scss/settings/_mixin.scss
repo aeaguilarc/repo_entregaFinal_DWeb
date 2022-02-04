@@ -1,0 +1,8 @@
+@mixin subTitles{ //Como ambos son predeterminados no envio parametros para definirlos
+    width: 100%;
+    text-align: center;
+    margin: 10px 30px;
+    h2{
+        font-size: 2em;
+    }
+}

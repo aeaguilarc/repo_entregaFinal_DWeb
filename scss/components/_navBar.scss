@@ -1,0 +1,73 @@
+/*--- NAB BAR SECTION ---*/
+.banner{
+    position: relative;
+    min-height: 100vh;
+    background: 
+    linear-gradient(rgba(26,26,26,0.3), 
+    rgba(26,26,26,0.3)), 
+    url(../images/index-img/banner2.jpg);
+    background-size: cover;
+    display: flex; 
+    align-items: center;
+    .text{
+        padding-left: 5%;
+            h1{
+                font-size: 5em;
+                color: white;
+                font-weight: 600;
+                line-height: 1.5em;
+            }
+    }
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 100px;
+    z-index: 1000;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    a{
+        .logo{
+            height: 75px;
+        }
+    }
+    ul{
+        position: relative;
+        display: flex;
+        li{
+            position: relative;
+            list-style: none; 
+            a{
+                position: relative;
+                display: inline-block;
+                margin: 0 15px;
+                color: #111;
+                text-decoration: none;
+            }
+        }
+    }
+    .nav-ul a:after{
+        content: "";
+        position: absolute;
+        background-color: $main-color;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+    .nav-ul a:hover:after{
+        width: 100%;
+    }
+}
+
+header.sticky{
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}

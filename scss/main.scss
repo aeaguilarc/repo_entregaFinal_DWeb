@@ -1,0 +1,28 @@
+
+@import "settings/vars";
+@import "settings/mixin";
+@import "components/navBar";
+@import "components/footer";
+@import "components/aboutUs";
+@import "components/adopt";
+@import "responsive/mediaQueries";
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex-grow: 1;
+}
