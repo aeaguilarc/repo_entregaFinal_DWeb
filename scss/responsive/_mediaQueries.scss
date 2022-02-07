@@ -1,10 +1,43 @@
+/*MEDIA QUERIES | RESPONSIVE*/
+@media (max-width: 1100px){
+  .donate-info{
+      .donate-content{
+          text-align: center;
+      }
+  } 
+  /*contact form - responsive*/
+  .container-contact{
+      .contact-form{
+          width: 100%;
+          .contact-row{
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              .contact-column{
+                  width: 100%;
+                  margin: 15px;
+              }
+          }
+      }   
+  } 
+  /*gallery - responsive*/
+  .container {
+      grid-template-columns: repeat(3, 1fr);
+      .gallery-container:nth-child(8){
+          grid-column: span 3;
+          grid-row: span 1;
+      }
+  }
+}
+
+/* header - responsive */
 @media (max-width: 991px) {
-    header, .header.sticky {
+  header,
+  .header.sticky{
       padding: 20px 50px;
       z-index: 1000;
-    }
-  
-    .menu {
+  }
+  .menu{
       position: fixed;
       top: 75px;
       left: -100%;
@@ -16,23 +49,19 @@
       background: #fff;
       transition: 0.5S;
       z-index: 900;
-      border-top: 1px solid rgba(0, 0, 0, 0.2);
-  
-      &.active {
-        left: 0;
-      }
-    }
-  
-    header ul li a {
+      border-top: 1px solid rgba(0,0,0,0.2);
+  }
+  .menu.active{
+      left: 0;
+  }
+  header ul li a{
       font-size: 24px;
       margin: 10px;
-  
-      &:hover {
-        color: #AEA4F2;
-      }
-    }
-  
-    .toggle {
+  }
+  header ul li a:hover{
+      color: $main-color;
+  }
+  .toggle{
       width: 40px;
       height: 40px;
       background: url(../images/index-img/menu.png);
@@ -41,28 +70,32 @@
       background-size: 30px;
       cursor: pointer;
       filter: invert(1);
-  
-      &.active {
-        width: 40px;
-        height: 40px;
-        background: url(../images/index-img/close.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 25px;
-        cursor: pointer;
-      }
-    }
   }
-  
-  @media (max-width: 800px) {
-    /*gallery - responsive*/
-  
-    .container {
+  .toggle.active{
+      width: 40px;
+      height: 40px;
+      background: url(../images/index-img/close.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      cursor: pointer;
+  }
+}
+
+@media (max-width: 800px){
+  /*contact form - responsive*/
+  .container-contact{
+      .contact-form{
+          width: 100%;
+          flex: 100%;
+      }
+  } 
+  /*gallery - responsive*/
+  .container {
       grid-template-columns: 1fr;
-  
-      .gallery-container:nth-child(n+1) {
-        grid-column: span 1;
-        grid-row: span 1;
+      .gallery-container:nth-child(n+1){
+          grid-column: span 1;
+          grid-row: span 1;
       }
-    }
   }
+}
